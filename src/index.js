@@ -98,26 +98,14 @@ class AppLogger
     */
     constructor(route, config = {}) 
     {   this.config                      =   { ...DEFAULT_CONFIG, ...config };
-        this.route                       =   this._generateRoute(route);
+        this.route                       =   route;
         this.logger                      =   this._createWinstonLogger();
       
       // Ensure log directory exists
       this._ensureLogDirectory();
     }
+   
   
-    /**
-     * Generates a unique route name with date
-     * @param {string} route - Base route name
-     * @returns {string} Generated route with date
-     * @private
-     */
-    _generateRoute(route) 
-    {   const dateString               =   formatDate(this.config.dateLocale);
-        const [datePart]               =   dateString.split(',');
-        const [day, month, year]       =   datePart.split('.');
-        const formattedDate            =   `${year}${month}${day}`;        
-        return `${route}-${formattedDate}`;
-    }
   
     /**
      * Ensures the log directory exists

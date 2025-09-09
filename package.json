@@ -19,12 +19,12 @@
     "node": ">=14.0.0"
   },
   "dependencies": {
-    "app-logger": "^1.0.0",
     "winston": "^3.8.0",
     "winston-daily-rotate-file": "^5.0.0"
   },
   "scripts": {
-    "test": "node test/test.js"
+    "test": "node test/test.js",
+    "test:filename": "node test/simple-filename-test.js"
   },
   "files": [
     "src/",

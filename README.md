@@ -1,4 +1,4 @@
-# @home-env/app-logger
+# @zandd/app-logger
 
 A comprehensive logging service for applications using Winston.
 
@@ -17,7 +17,7 @@ A comprehensive logging service for applications using Winston.
 
 ### Private Registry (Recommended)
 ```bash
-npm install @home-env/app-logger --registry http://localhost:4873/
+npm install @zandd/app-logger --registry http://192.168.129.196:8081/repository/zandd-npm-hosted/
 ```
 
 ### Local Installation
@@ -26,13 +26,13 @@ npm install @home-env/app-logger --registry http://localhost:4873/
 cd app-logger
 npm pack
 cd /your/project
-npm install /path/to/home-env-app-logger-1.0.0.tgz
+npm install /path/to/zandd-app-logger-1.0.1.tgz
 ```
 
 ## Quick Start
 
 ```javascript
-const AppLogger = require('@home-env/app-logger');
+const AppLogger = require('@zandd/app-logger');
 
 // Create a logger instance
 const logger = new AppLogger('my-module');
@@ -141,7 +141,7 @@ When file rotation is disabled:
 Full TypeScript definitions are included:
 
 ```typescript
-import AppLogger, { LoggerConfig } from '@home-env/app-logger';
+import AppLogger, { LoggerConfig } from '@zandd/app-logger';
 
 const config: LoggerConfig = {
   logTracelevel: 'debug',
@@ -157,7 +157,7 @@ await logger.info('TypeScript logger initialized');
 
 ### Basic Usage
 ```javascript
-const AppLogger = require('@home-env/app-logger');
+const AppLogger = require('@zandd/app-logger');
 const logger = new AppLogger('temperature-service');
 
 // Log sensor readings
@@ -221,7 +221,7 @@ If you're migrating from the original loggerClass.js:
 // const logger = new LoggerService('my-module');
 
 // NEW WAY:
-const AppLogger = require('@home-env/app-logger');
+const AppLogger = require('@zandd/app-logger');
 const logger = new AppLogger('my-module');
 
 // All existing method calls work exactly the same!
