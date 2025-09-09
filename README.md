@@ -245,6 +245,15 @@ Daniel S. A. Khan (c) 2021-2025
 
 ## Changelog
 
+### v1.0.1 (2025-09-09)
+- Fixed filename format inconsistencies - removed duplicate date in rotating log files
+- Updated package name from `@home-env/app-logger` to `@zandd/app-logger` across all documentation
+- Removed circular dependency from package.json
+- Consolidated test files and improved test structure
+- Fixed test scripts and removed problematic test files
+- Updated README installation instructions with correct registry URL
+- Improved project consistency and documentation
+
 ### v1.0.0
 - Initial release
 - Winston-based logging with custom levels
