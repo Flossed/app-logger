@@ -245,6 +245,13 @@ Daniel S. A. Khan (c) 2021-2025
 
 ## Changelog
 
+### v1.1.0 (2025-09-09)
+- **Major version bump** to supersede v1.0.2 and establish clear versioning
+- Prepared package for public npm registry publishing
+- Updated repository URL for public GitHub repository
+- Consolidated all improvements from v1.0.1 into stable v1.1.0 release
+- Ready for npm publish with public access
+
 ### v1.0.1 (2025-09-09)
 - Fixed filename format inconsistencies - removed duplicate date in rotating log files
 - Updated package name from `@home-env/app-logger` to `@zandd/app-logger` across all documentation
