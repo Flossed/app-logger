@@ -240,6 +240,30 @@ await logger.error('Error occurred', { error: 'details' });
 - **winston**: ^3.8.0 - Core logging functionality
 - **winston-daily-rotate-file**: For file rotation (automatically included)
 
+## Development & Publishing
+
+### Automated Publishing
+This package uses GitHub Actions with OpenID Connect (OIDC) for secure, automated publishing to npm:
+
+- **Releases**: Creating a GitHub release automatically triggers npm publishing
+- **Manual**: Can be triggered manually from GitHub Actions
+- **Secure**: Uses trusted publisher authentication (no npm tokens stored)
+- **Tested**: Runs full test suite before publishing
+
+### GitHub Actions Workflow
+The publishing workflow:
+1. ✅ Runs test suite (`npm test`)
+2. ✅ Runs filename validation (`npm run test:filename`) 
+3. ✅ Publishes to npm with provenance
+4. 🔒 Protected by production environment
+
+### Contributing
+1. Fork the repository
+2. Create a feature branch
+3. Make changes and add tests
+4. Submit a pull request
+5. Once merged, create a release to publish
+
 ## License
 
 MIT License - see [LICENSE](LICENSE) file for details.
@@ -251,6 +275,14 @@ This package is open source and available under the MIT License.
 Daniel S. A. Khan (c) 2021-2025
 
 ## Changelog
+
+### v1.2.0 (2025-09-09)
+- **Added automated publishing workflow** using GitHub Actions with OpenID Connect (OIDC)
+- **Enhanced security** - No npm tokens stored, uses trusted publisher authentication
+- **Automated releases** - Creating GitHub releases automatically publishes to npm
+- **Enhanced documentation** - Added Development & Publishing section
+- **CI/CD integration** - Full test suite validation before publishing
+- **Provenance support** - Packages include cryptographic provenance metadata
 
 ### v1.1.1 (2025-09-09)
 - **Documentation updates** for public npm package
