@@ -15,18 +15,23 @@ A comprehensive logging service for applications using Winston.
 
 ## Installation
 
-### Private Registry (Recommended)
+### NPM Registry (Recommended)
 ```bash
-npm install @zandd/app-logger --registry http://192.168.129.196:8081/repository/zandd-npm-hosted/
+npm install @zandd/app-logger
 ```
 
-### Local Installation
+### Yarn
 ```bash
-# From the npm-packages directory
+yarn add @zandd/app-logger
+```
+
+### Local Development Installation
+```bash
+# Clone and install locally for development
+git clone https://github.com/Flossed/app-logger.git
 cd app-logger
-npm pack
-cd /your/project
-npm install /path/to/zandd-app-logger-1.0.1.tgz
+npm install
+npm test
 ```
 
 ## Quick Start
@@ -237,13 +242,22 @@ await logger.error('Error occurred', { error: 'details' });
 
 ## License
 
-UNLICENSED - Private module
+MIT License - see [LICENSE](LICENSE) file for details.
+
+This package is open source and available under the MIT License.
 
 ## Author
 
 Daniel S. A. Khan (c) 2021-2025
 
 ## Changelog
+
+### v1.1.1 (2025-09-09)
+- **Documentation updates** for public npm package
+- Updated installation instructions to use public npm registry
+- Corrected license information from UNLICENSED to MIT License
+- Updated package status note to reflect public availability
+- Final preparation for npm publishing
 
 ### v1.1.0 (2025-09-09)
 - **Major version bump** to supersede v1.0.2 and establish clear versioning
@@ -273,4 +287,4 @@ Daniel S. A. Khan (c) 2021-2025
 
 ---
 
-**Note**: This is a private npm module for application logging. It maintains compatibility with the original loggerClass.js interface while providing enhanced features and configurability.
+**Note**: This is a public npm module available at [@zandd/app-logger](https://www.npmjs.com/package/@zandd/app-logger) for application logging.  
